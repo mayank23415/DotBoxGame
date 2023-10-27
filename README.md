@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+[![Build Status](https://travis-ci.org/PaliwalSparsh/dots-and-boxes.svg?branch=master)](https://travis-ci.org/PaliwalSparsh/dots-and-boxes)
+[![Storybook](https://github.com/storybooks/brand/blob/master/badge/badge-storybook.svg)](https://5c7525e30b10e7d8d0526fa5--dots-and-boxes.netlify.com)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dots-and-boxes
 
-## Available Scripts
+**Game demo link**: [https://dots-and-boxes.netlify.com/](https://dots-and-boxes.netlify.com/)
 
-In the project directory, you can run:
+**Storybook link**: [https://5c7525e30b10e7d8d0526fa5--dots-and-boxes.netlify.com](https://5c7525e30b10e7d8d0526fa5--dots-and-boxes.netlify.com)
 
-### `npm start`
+_In storybook you can view all components used to make this game and play with knobs to understand their behaviour._
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Requirements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Creating the game dots and boxes. Players take turns joining two horizontally or vertically adjacent dots by a line. A player that completes the fourth side of a square (a box) colors that box and must play again. When all boxes have been colored, the game ends and the player who has colored more boxes wins.
 
-### `npm test`
+## Approach
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Game constitutes mainly of grid. The grid is made up of smaller blocks GridBlock(component). It composed of a box div (component) with a bar div (component) one on its left and another on its top. ( _you can view these in storybook for better understanding_ )
 
-### `npm run build`
+These GridBlocks put side-by-side create rows and columns for Grid. When a user clicks on a bar in a GridBlock we dispatch an action `UPDATE_GRID` with payload `{ row, column, type }`. Row and column define the position of GridBlock and type tells is it the `top` bar or `left` bar of the GridBlock. Based on if it is bar on top or bar on left of GridBlock we check if enabling this bar leads to completion of current box or adjacent boxes. We swap turns and wait until total score of both players becomes equal to max score possible and finish the game.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  React ( hooks, useReducer used to setup Redux like action, reducer lifecycle. )
+2.  Storybook - can be used to view all basic components used to create app.
+3.  create-react-app
+4.  Netlify for deployment - **BONUS POINTS** :smile:
+5.  Travis CI for continuous integration - It runs tests and check if the build is stable.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting started
 
-### `npm run eject`
+1.  `npm start` To run the app in the development mode . Browse to [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2.  `npm test` Launches the test runner in the watch mode. It will run the following -
+    a) unit tests - For actions, reducers and utils using jest.
+    b) snapshot tests - For structural testing components using storyshot addon of storybook.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.  `npm run build` Builds the app for production to the `build` folder.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4.  `npm run storybook` To start the storybook development server.

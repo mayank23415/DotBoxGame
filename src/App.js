@@ -1,22 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import Intro from './splash-screens/Introduction/Intro';
-import { useEffect, useState } from 'react';
-import Nav from './components/Navigation/Nav';
+import React, { Component } from 'react';
+import GameContainer from './containers/GameContainer';
+import './App.global.css';
 
-
-function App() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, [])
-  return (
-    <div>
-      {loading ? <Intro /> : <Nav />}
-    </div>
-  );
+class App extends Component {
+	render() {
+		return (
+			<div className="app">
+				<GameContainer />
+			</div>
+		);
+	}
 }
 
 export default App;

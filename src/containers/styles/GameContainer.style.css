@@ -1,0 +1,10 @@
+.game-container {
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.288), transparent),
+    url(./../../assets/images/game-container-bg4.jpg);
+}

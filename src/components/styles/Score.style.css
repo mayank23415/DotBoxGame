@@ -1,0 +1,18 @@
+.score-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  text-transform: uppercase;
+  margin: 5px;
+  font-weight: bold;
+  color: grey;
+  border-right: 1px solid black;
+  padding-right: 10px;
+}
+
+.value {
+  margin: 5px;
+  color: grey;
+}
