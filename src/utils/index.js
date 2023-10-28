@@ -1,3 +1,4 @@
+// We are using this function to log the actions taken and the changes in state
 export function logStates(state, action) {
 	const isDevelopment = process.env.NODE_ENV === 'development';
 	if (isDevelopment) {
@@ -6,6 +7,8 @@ export function logStates(state, action) {
 	}
 }
 
+
+// This function is return a block of a grid
 export function gridBlockObject(row, column, left, top, completedBy) {
 	return {
 		row,
@@ -16,6 +19,7 @@ export function gridBlockObject(row, column, left, top, completedBy) {
 	};
 }
 
+// This function is generating grid
 export function generateGrid(rows, columns) {
 	let grid = [];
 	let i, j, rowData;
@@ -37,6 +41,7 @@ export function generateGrid(rows, columns) {
 	grid.push(rowData);
 	return grid;
 }
+
 
 export function deepCopyArrayWhileUpdatingRowValues(array, row, column, valueToBeUpdatedAtRow) {
 	return Object.assign([...array], {
