@@ -184,11 +184,16 @@ export function getUpdatedState(state, action) {
 	const isGameComplete = isGameCompleted(state.rows, state.columns, updatedScores);
 
 	//---------------------------------------------------------------------------//
-
+	function countElementsInGrid(grid) {
+		const gridLengthMinusOne = grid.map(subArray => subArray.slice(0, -1)); // Reduce length by 1
+		gridLengthMinusOne.pop();
+		return gridLengthMinusOne.reduce((total, subArray) => total + subArray.length, 0);
+	}
 	return Object.assign(
 		{},
 		state,
 		{ grid: updatedGrid },
+		{ numberOfBlocks: countElementsInGrid(grid) - (updatedScores[0] + updatedScores[1]) },
 		{ currentPlayer: shouldTogglePlayer ? togglePlayer(currentPlayer) : currentPlayer },
 		{ scores: updatedScores },
 		isGameComplete ? { currentScreen: 2 } : {}

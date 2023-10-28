@@ -9,7 +9,7 @@ const { PRIMARY_BAR_COLOR, SECONDARY_BAR_COLOR } = Constants.colors;
 
 function MainScreen(props) {
 	const { state, dispatch } = props;
-	const { rows, columns } = state;
+	const { rows, columns} = state;
 	useEffect(
 		() => {
 			dispatch(generateGrid());
@@ -20,7 +20,7 @@ function MainScreen(props) {
 		<div className="main-screen">
 			<div className="main-screen__scores">
 				<Score title="Player 1" color={PRIMARY_BAR_COLOR} value={state.scores[0]} />
-				
+				<p>Grid Left : {state.numberOfBlocks}</p>
 				<Score title="Player 2" color={SECONDARY_BAR_COLOR} value={state.scores[1]} />
 			</div>
 			<div className="main-screen__grid">
