@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DotBoxGame/static/css/main.5e128dcc.css",
-    "main.js": "/DotBoxGame/static/js/main.7548fb16.js",
+    "main.js": "/DotBoxGame/static/js/main.31c66222.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/DotBoxGame/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/DotBoxGame/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/DotBoxGame/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
@@ -12,10 +12,10 @@
     "index.html": "/DotBoxGame/index.html",
     "static/media/dot-dot-11551063272jw5bhsleqo3.webp": "/DotBoxGame/static/media/dot-dot-11551063272jw5bhsleqo3.1e529ca1640355cc2f2b.webp",
     "main.5e128dcc.css.map": "/DotBoxGame/static/css/main.5e128dcc.css.map",
-    "main.7548fb16.js.map": "/DotBoxGame/static/js/main.7548fb16.js.map"
+    "main.31c66222.js.map": "/DotBoxGame/static/js/main.31c66222.js.map"
   },
   "entrypoints": [
     "static/css/main.5e128dcc.css",
-    "static/js/main.7548fb16.js"
+    "static/js/main.31c66222.js"
   ]
 }
