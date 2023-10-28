@@ -1,3 +1,4 @@
+
 // We are using this function to log the actions taken and the changes in state
 export function logStates(state, action) {
 	const isDevelopment = process.env.NODE_ENV === 'development';
@@ -70,9 +71,7 @@ export function getUpdatedState(state, action) {
 	const { currentPlayer, grid, scores } = state;
 	const { row, column, type } = action.payload;
 	const isTopBarUpdated = type === 'top';
-	const currentBlockState = grid[column][row];
-	let currentTurnScore = 0;
-
+	const currentBlockState = grid[column][row]; let currentTurnScore = 0;
 	//---------------------------------------------------------------------------//
 
 	const hasAlreadyBeenChangedBefore = isTopBarUpdated
@@ -88,6 +87,7 @@ export function getUpdatedState(state, action) {
 		currentBlockState,
 		isTopBarUpdated ? { top: currentPlayer } : { left: currentPlayer }
 	);
+
 	let updatedGrid = deepCopyArrayWhileUpdatingRowValues(state.grid, row, column, updatedBlockState);
 
 	//---------------------------------------------------------------------------//

@@ -25,7 +25,7 @@ function MainScreen(props) {
 		<div className="start-menu">
 			<div className="start-menu__header">
 				<img className="start-menu__game-logo" src={Icon} alt="game icon." />
-				<div>Select Your Grid</div>
+				<div>Select Your Grid Size</div>
 			</div>
 			<div className="start-menu__input">
 				<label>Rows</label>
