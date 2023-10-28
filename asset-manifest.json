@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/DotBoxGame/static/css/main.aac4c762.css",
-    "main.js": "/DotBoxGame/static/js/main.0f940927.js",
+    "main.css": "/DotBoxGame/static/css/main.5e128dcc.css",
+    "main.js": "/DotBoxGame/static/js/main.7548fb16.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/DotBoxGame/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/DotBoxGame/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/DotBoxGame/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/DotBoxGame/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/DotBoxGame/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/game-container-bg4.jpg": "/DotBoxGame/static/media/game-container-bg4.81d2aec5b57113622e50.jpg",
+    "static/media/Splash_image.webp": "/DotBoxGame/static/media/Splash_image.1deff6f4c347283cc13f.webp",
     "index.html": "/DotBoxGame/index.html",
     "static/media/dot-dot-11551063272jw5bhsleqo3.webp": "/DotBoxGame/static/media/dot-dot-11551063272jw5bhsleqo3.1e529ca1640355cc2f2b.webp",
-    "main.aac4c762.css.map": "/DotBoxGame/static/css/main.aac4c762.css.map",
-    "main.0f940927.js.map": "/DotBoxGame/static/js/main.0f940927.js.map"
+    "main.5e128dcc.css.map": "/DotBoxGame/static/css/main.5e128dcc.css.map",
+    "main.7548fb16.js.map": "/DotBoxGame/static/js/main.7548fb16.js.map"
   },
   "entrypoints": [
-    "static/css/main.aac4c762.css",
-    "static/js/main.0f940927.js"
+    "static/css/main.5e128dcc.css",
+    "static/js/main.7548fb16.js"
   ]
 }
